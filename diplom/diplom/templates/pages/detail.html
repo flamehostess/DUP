@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{post.title}}
+{% endblock %}
+
+{% block content %}
+    <h2>{{post.title}}</h2>
+    <p>{{post.text}}</p>
+    <em>{{post.pub_date}}</em>
+
+    {% if post.was_published_recently %}
+        NEW POST!
+    {% endif %}
+
+    <hr>
+    {% if latest_comments_list %}
+        {% for c in latest_comments_list %}
+            <p>
+                <strong>{{c.text}}</strong>
+            </p>
+        {% endfor %}
+        {% else %}
+            Comments not found. 
+    {% endif %}
+    <hr>
+    <form action="{% url 'pages:leave_comment' post.id %}" method="POST">
+        {% csrf_token %}
+
+        <input type="text" required placeholder="Your name" name="name"><br>
+        <textarea name="text" required="" placeholder="Text comment" cols="30" rows="10"></textarea><br>
+
+        <button type="submit">Send comment</button>
+    </form>
+{% endblock %}

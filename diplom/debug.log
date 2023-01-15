@@ -1,0 +1,31 @@
+2023-01-14 15:36:09,920 django.utils.autoreload INFO     D:\VSCode\diplom\diplom\apps\pages\views.py changed, reloading.
+2023-01-14 15:37:48,612 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-01-14 15:38:35,325 django.request ERROR    Internal Server Error: /
+2023-01-14 15:38:35,842 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:38:37,613 django.request ERROR    Internal Server Error: /
+2023-01-14 15:38:37,722 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:42:45,833 django.utils.autoreload INFO     D:\VSCode\diplom\diplom\apps\pages\views.py changed, reloading.
+2023-01-14 15:42:48,207 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-01-14 15:42:50,565 django.request ERROR    Internal Server Error: /
+2023-01-14 15:42:51,330 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:43:00,793 pages.views  ERROR    хуйлуша
+2023-01-14 15:43:00,793 django.request ERROR    Internal Server Error: /pages/archive/3003/
+2023-01-14 15:43:03,122 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:43:09,276 pages.views  ERROR    хуйлуша
+2023-01-14 15:43:09,444 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:44:15,707 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-01-14 15:44:17,600 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:44:30,811 pages.views  ERROR    хуйлуша
+2023-01-14 15:44:30,811 django.request ERROR    Internal Server Error: /pages/archive/3003/
+2023-01-14 15:44:31,059 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:44:46,065 pages.views  ERROR    хуйлуша
+2023-01-14 15:44:46,231 django.request ERROR    Internal Server Error: /favicon.ico
+2023-01-14 15:48:50,089 django.utils.autoreload INFO     D:\VSCode\diplom\diplom\settings.py changed, reloading.
+2023-01-14 15:48:52,505 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-01-14 15:48:56,202 django.request WARNING  Not Found: /
+2023-01-14 15:48:56,746 django.request WARNING  Not Found: /favicon.ico
+2023-01-14 15:49:00,435 django.request WARNING  Not Found: /
+2023-01-14 15:49:00,499 django.request WARNING  Not Found: /favicon.ico
+2023-01-15 12:05:23,666 django.request WARNING  Not Found: /
+2023-01-15 12:05:23,705 django.request WARNING  Not Found: /
+2023-01-15 12:05:26,589 django.request WARNING  Not Found: /pages/giug
