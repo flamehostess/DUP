@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'schedule',
+    'schedule.apps.ScheduleConfig',
     'rest_framework',
     'corsheaders',
 ]
@@ -43,13 +43,13 @@ MIDDLEWARE = [
 
 # Нужно для того, чтобы не блокировать совместное
 # взаимодействие framework react с django
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
-    ]
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.AllowAny'
+#     ]
+# }
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'dup.urls'
 
@@ -79,6 +79,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'django_schedule_db',
+        # 'USER': 'root',
+        # 'PASSWORD': '',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '3306',
     }
 }
 
@@ -101,6 +107,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Whitelisting React port
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000'
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

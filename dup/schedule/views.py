@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from rest_framework import viewsets
 from rest_framework.views import APIView
 from . models import *
-from . serializer import *
+from .serializers import *
 from rest_framework.response import Response
 
 # Create your views here.
@@ -20,3 +21,8 @@ class ReactView(APIView):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(serializer.data)
+        
+
+class StageView(viewsets.ModelViewSet):
+    serializer_class = StageSerializer
+    queryset = Stage.objects.all()
