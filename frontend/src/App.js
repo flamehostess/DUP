@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import AddStage from './components/AddStage';
 import ShowStages from './components/ShowStages';

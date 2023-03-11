@@ -23,12 +23,12 @@ const ShowStages = () => {
             {
                 stages.map((stage, index) => (
                     <Card className="m=2 rounded shadow-lg" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                     <Card.Body>
                         <Card.Title>{stage.name_stage}</Card.Title>
-                        <Card.Text>{stage.execution_time}</Card.Text>
+                        <Card.Text className="stage-executionTime-info">{stage.execution_time}</Card.Text>
                         {/* <Button variant="primary">Show Detail</Button> */}
-                        <Link className="btn btn-primary" to={`/${stage.pk}/`}>Detail</Link>
+                        <Link className="btn btn-primary" to={`/${stage.id}/`}>Detail</Link>
                     </Card.Body>
                     </Card>
                 ))

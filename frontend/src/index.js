@@ -5,13 +5,14 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 
-const cors = require('cors');
-const corsOptions ={
-  origin: 'http://localhost:3000',
-  credentials: true,
-  optionSuccessStatus: 200
-}
-App.use(cors(corsOptions));
+// const cors = require('cors');
+// const corsOptions ={
+//   origin: 'http://localhost:3000',
+//   credentials: true,
+//   optionSuccessStatus: 200
+// }
+// App.use(cors(corsOptions));
+//создадим свой собственны прокси сервер
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
