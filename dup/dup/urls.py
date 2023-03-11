@@ -6,11 +6,11 @@ from rest_framework import routers
 # from django.conf import settings
 
 router = routers.DefaultRouter()
-router.register(r'stages', views.StageView, 'stage')
+router.register("", StageView, basename='stage')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', ReactView.as_view(), name="react"),
-    path('schedule/', include(router.urls))
+    path('api/', include(router.urls))
 ]
