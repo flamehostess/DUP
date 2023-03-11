@@ -6,7 +6,7 @@ from rest_framework import routers
 # from django.conf import settings
 
 router = routers.DefaultRouter()
-router.register("", StageView, basename='stage')
+router.register("", StageView, basename='stageview')
 
 
 urlpatterns = [

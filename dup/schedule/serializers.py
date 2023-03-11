@@ -10,10 +10,11 @@ class ReactSerializer(serializers.ModelSerializer):
 class StageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stage
-        fields = (
-            'name_stage',
-            'work_id',
-            'execution_time',
-            'priority',
-            'machine'
-        )
+        fields = '__all__'
+        # fields = [
+        #     'name_stage',
+        #     'work_id',
+        #     'execution_time',
+        #     'priority',
+        #     'machine'
+        # ]

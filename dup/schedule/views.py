@@ -24,5 +24,5 @@ class ReactView(APIView):
         
 
 class StageView(viewsets.ModelViewSet):
-    serializer_class = StageSerializer
     queryset = Stage.objects.all()
+    serializer_class = StageSerializer
