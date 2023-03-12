@@ -28,3 +28,13 @@ class MachineSerializer(serializers.ModelSerializer):
             'name_machine',
             'description'
         ]
+
+class WorkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Work
+        fields = [
+            'id',
+            'name_work',
+            'release_dates',
+            'due_dates'
+        ]

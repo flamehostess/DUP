@@ -7,6 +7,7 @@ import NavBarMenu from './components/NavBarMenu';
 import StageDetail from './components/StageDetail';
 import UpdateStage from './components/UpdateStage';
 import ShowMachines from './components/ShowMachines';
+import ShowANDAddWorks from './components/ShowANDAddWorks';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/addStage' element={<AddStage/>} />
           <Route exact path='/stage/:id/' element={<StageDetail/>} />
           <Route exact path='/stage/:id/update' element={<UpdateStage/>} />
+          <Route exact path='/works' element={<ShowANDAddWorks/>} />
         </Routes>
       </Router>
     </div>

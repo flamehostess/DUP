@@ -6,8 +6,6 @@ const AddStage = () => {
 
     const [machines, setMachines] = useState([])
 
-    const asOptions = ['jfg', 'fjoe'];
-
     const getMachines = async () => {
         const response = await axios.get('http://localhost:8000/machine/') 
         // console.log(response.data)  

@@ -5,15 +5,19 @@ from schedule.views import *
 from rest_framework import routers
 # from django.conf import settings
 
-router1 = routers.DefaultRouter()
-router2 = routers.DefaultRouter()
-router2.register("", MachineView, basename='machineview')
-router1.register("", StageView, basename='stageview')
+routerStage = routers.DefaultRouter()
+routerMachine = routers.DefaultRouter()
+routerWork = routers.DefaultRouter()
+
+routerStage.register("", StageView, basename='stageview')
+routerMachine.register("", MachineView, basename='machineview')
+routerWork.register("", WorkView, basename="workview")
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', ReactView.as_view(), name="react"),
-    path('stage/', include((router1.urls, 'stageview'))),
-    path('machine/', include((router2.urls, 'machineview'))),
+    path('stage/', include((routerStage.urls, 'stageview'))),
+    path('machine/', include((routerMachine.urls, 'machineview'))),
+    path('work/', include((routerWork.urls, 'workview'))),
 ]
