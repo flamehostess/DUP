@@ -23,7 +23,7 @@ const AddStage = () => {
 
         await axios({
             method: 'post', //отправляем информацию из формы в api
-            url: 'http://localhost:8000/api/',
+            url: 'http://localhost:8000/stage/',
             data: formField
         }).then((response) => {
             console.log(response.data);
@@ -86,7 +86,7 @@ const AddStage = () => {
                         name="machine"
                         value={machine}
                         onChange={(e) => setMachine(e.target.value)}>
-                            
+
                     </select>
                 </div>
                 <button className="btn btn-success" onClick={AddStageInfo}>Add Stage</button>

@@ -7,10 +7,12 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register("", StageView, basename='stageview')
+router.register("", MachineView, basename='machineview')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', ReactView.as_view(), name="react"),
-    path('api/', include(router.urls))
+    path('stage/', include(router.urls)),
+    path('machine/', include(router.urls))
 ]

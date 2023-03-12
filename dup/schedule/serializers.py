@@ -19,3 +19,12 @@ class StageSerializer(serializers.ModelSerializer):
             'priority',
             'machine'
         ]
+
+class MachineSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Machine
+        fields = [
+            'id',
+            'name_machine',
+            'description'
+        ]

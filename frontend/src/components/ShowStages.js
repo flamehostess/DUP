@@ -7,7 +7,7 @@ const ShowStages = () => {
     const [stages, setStages] = useState([])
 
     const getStages = async () => {
-        const response = await axios.get('http://localhost:8000/api/') 
+        const response = await axios.get('http://localhost:8000/stage/') 
         // console.log(response.data)  
         setStages(response.data)//она установит все stage, поступаемые из api в переменную stage
     }

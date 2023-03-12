@@ -28,3 +28,9 @@ class StageView(viewsets.ModelViewSet):
     queryset = Stage.objects.all()
     serializer_class = StageSerializer
     logic_schedule(queryset)
+
+
+class MachineView(viewsets.ModelViewSet):
+    queryset = Machine.objects.all()
+    serializer_class = MachineSerializer
+    

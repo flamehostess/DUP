@@ -14,7 +14,7 @@ const UpdateStage = () => {
     const {id} = useParams();
 
     const loadStage = async () => {
-        const {data} = await axios.get(`http://localhost:8000/api/${id}`);
+        const {data} = await axios.get(`http://localhost:8000/stage/${id}`);
         console.log(data)
         setName(data.name_stage)
         setWorkId(data.work_id)
@@ -38,7 +38,7 @@ const UpdateStage = () => {
 
         await axios({
             method: 'PUT',
-            url: `http://localhost:8000/api/${id}/`,
+            url: `http://localhost:8000/stage/${id}/`,
             data: formField
         }).then(response => {
             console.log(response.data)

@@ -12,7 +12,7 @@ const StageDetail = () => {
     const {id} = useParams();
 
     const getSingleStage = async () => {
-        const {data} = await axios.get(`http://localhost:8000/api/${id}`);
+        const {data} = await axios.get(`http://localhost:8000/stage/${id}`);
         console.log(data)
         setStage(data)
     }
