@@ -79,6 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': 'django_business_logic'
         # 'ENGINE': 'django.db.backends.mysql',
         # 'NAME': 'django_schedule_db',
         # 'USER': 'root',

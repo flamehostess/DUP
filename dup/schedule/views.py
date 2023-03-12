@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from . models import *
 from .serializers import *
 from rest_framework.response import Response
+from .logic import logic_schedule
 
 # Create your views here.
 class ReactView(APIView):
@@ -26,3 +27,4 @@ class ReactView(APIView):
 class StageView(viewsets.ModelViewSet):
     queryset = Stage.objects.all()
     serializer_class = StageSerializer
+    logic_schedule(queryset)

@@ -79,14 +79,15 @@ const AddStage = () => {
                     />
                 </div>
                 <div className="form-group">
-                    <input
+                    <select
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Enter machine"
                         name="machine"
                         value={machine}
-                        onChange={(e) => setMachine(e.target.value)}
-                    />
+                        onChange={(e) => setMachine(e.target.value)}>
+                            
+                    </select>
                 </div>
                 <button className="btn btn-success" onClick={AddStageInfo}>Add Stage</button>
             </div>
