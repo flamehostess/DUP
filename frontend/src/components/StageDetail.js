@@ -23,8 +23,8 @@ const StageDetail = () => {
 
     //Delete Stage
     const deleteStage = async (id) => {
-        await axios.delete(`http://localhost:8000/api/${id}/`)
-        navigate('/', {replace: true});
+        await axios.delete(`http://localhost:8000/stage/${id}/`)
+        navigate('/Stage', {replace: true});
     }
 
     return (
@@ -33,7 +33,8 @@ const StageDetail = () => {
             <div className="single-stage-info">
                 <p>{stage.name_stage}</p>
                 <p>{stage.execution_time}</p>
-                <Link className='btn btn-primary m-2' to={`/${stage.id}/update`}>Update</Link>
+                {/* <Link className='btn btn-primary m-2' to={`${stage.id}/update`}>Update</Link> */}
+                <Link className='btn btn-primary m-2' to={`update`}>Update</Link>
                 <Link className='btn btn-danger m-2' onClick={() => deleteStage(stage.id)}>Delete</Link>
            </div>
         </div>

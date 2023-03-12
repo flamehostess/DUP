@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBarMenu from './components/NavBarMenu';
 import StageDetail from './components/StageDetail';
 import UpdateStage from './components/UpdateStage';
+import ShowMachines from './components/ShowMachines';
 
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
       <Router>
         <NavBarMenu />
         <Routes>
-          <Route exact path='/' element={<ShowStages/>} />
+          <Route exact path='/machine' element={<ShowMachines/>} />
+          <Route exact path='/stage' element={<ShowStages/>} />
           <Route exact path='/addStage' element={<AddStage/>} />
-          <Route exact path='/:id/' element={<StageDetail/>} />
-          <Route exact path='/:id/update' element={<UpdateStage/>} />
+          <Route exact path='/stage/:id/' element={<StageDetail/>} />
+          <Route exact path='/stage/:id/update' element={<UpdateStage/>} />
         </Routes>
       </Router>
     </div>

@@ -3,33 +3,33 @@ import axios from 'axios';
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const ShowStages = () => {
+const ShowMachines = () => {
 
-    const [stages, setStages] = useState([])
+    const [machines, setMachines] = useState([])
 
-    const getStages = async () => {
-        const response = await axios.get('http://localhost:8000/stage/') 
+    const getMachines = async () => {
+        const response = await axios.get('http://localhost:8000/machine/') 
         // console.log(response.data)  
-        setStages(response.data)//она установит все stage, поступаемые из api в переменную stage
+        setMachines(response.data)//она установит все machine, поступаемые из api в переменную machine
     }
 
     useEffect(() => {
-        getStages();
+        getMachines();
     }, [])
 
     return (
         <div>   
-            <div className="card-info stages-card-info">
+            <div className="card-info machines-card-info">
             {/* <h1>Show All the Stages</h1> */}
             {
-                stages.map((stage, index) => (
+                machines.map((machine, index) => (
                     <Card className="m=2 rounded shadow-lg" style={{ width: '18rem' }}>
                     {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                     <Card.Body>
-                        <Card.Title>{stage.name_stage}</Card.Title>
-                        <Card.Text className="stage-executionTime-info">{stage.execution_time}</Card.Text>
+                        <Card.Title>{machine.name_machine}</Card.Title>
+                        <Card.Text className="machine-description-info">{machine.description}</Card.Text>
                         {/* <Button variant="primary">Show Detail</Button> */}
-                        <Link className="btn btn-primary" to={`${stage.id}`}>Detail</Link>
+                        <Link className="btn btn-primary" to={`machine/${machine.id}/`}>Detail</Link>
                     </Card.Body>
                     </Card>
                 ))
@@ -39,4 +39,4 @@ const ShowStages = () => {
     );
 };
 
-export default ShowStages;
+export default ShowMachines;

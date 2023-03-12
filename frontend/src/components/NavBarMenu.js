@@ -9,7 +9,8 @@ const NavBarMenu = () => {
                 <Navbar.Brand href="#home">DUP</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Nav className="me-auto">
-                    <NavLink className="show-stages-nav" to="/">Stages</NavLink>
+                    <NavLink className="show-machines-nav" to="/Machine">Machines</NavLink>
+                    <NavLink className="show-stages-nav" to="/Stage">Stages</NavLink>
                     <NavLink className="add-stage-nav" to="/AddStage">Add stage</NavLink>
                 </Nav>
             </Navbar>
